@@ -3,15 +3,23 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: Naked twins allows us to reduce the space of possibilities in a given Unit where the twins exists.
-In this unit we are able to remove both the values of the twins on their peers.
+A:
+The main idea of constraint propagation is to reduce the search space of our problem.
+
+Naked twins are 2 boxes with the same 2 possible values on a given unit.
+
+In this unit we are able to remove both possible values of the twins from their peers.
+
 With this reduction we have a smaller space of possibilities and can get closer to a solution.
+
+Its important to note that this space reduction via constraint propagation must be faster than just doing the search anyway.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: Using the rule of the diagonal sudoku we add another kind of Units to our system, the diagonals.
-We use the same code we had before but using this Units as well.
-This means we use the constrains like only choice on the diagonal units in order to reduce the space of possibilities and get to a final solution.
+A:
+As the previous answer the main idea of constraint propagation is to reduce the search space of the problem.
+
+Here we have three strategies that use constraint propagation to solve diagonals sudoku: elimination, only choice and naked twins. We use this constraint propagation techniques the same way as with normal sudokus but with a small difference: we use the diagonals of the sudoku as another unit to consider in our strategies. This means we have 4 kinds of units now: rows, columns, squares and diagonals. But other than that the idea of constraint propagation is the same: use different rules that we know are true in order to reduce the search space of the problem and solve it faster than only doing plain search.
 
 ### Install
 
